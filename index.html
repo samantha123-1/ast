@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AST Crypto Trading | Premium Signals & News</title>
+    <meta name="description" content="The ultimate futuristic platform for crypto trading news and analysis.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AST CRYPTO</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#join">Join Premium</a></li>
+                </ul>
+                <button class="btn">Connect Wallet</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="live-badge" id="hero-live-badge">
+                <span class="pulse"></span>
+                <span class="badge-label">BTC Live:</span>
+                <span class="badge-price" id="hero-btc-price">Loading...</span>
+                <span class="badge-change" id="hero-btc-change"></span>
+            </div>
+            <h1 class="glow-text">The Future of <br><span style="color: var(--primary);">Crypto Trading</span></h1>
+            <p>Experience real-time analytics, premium signals, and breaking news in a unified, next-gen interface.</p>
+            <div class="hero-buttons">
+                <button class="btn">Start Trading</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker" id="ticker-content">
+            <!-- JS will inject ticker items here -->
+        </div>
+    </div>
+
+    <!-- Market Overview -->
+    <section id="market" class="dashboard">
+        <div class="container">
+            <h2 class="section-title">Live <span style="color: var(--secondary);">Bitcoin Index</span></h2>
+            <div class="chart-container">
+                <canvas id="marketChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest <span style="color: var(--primary);">Intelligence</span></h2>
+            <div class="news-grid" id="news-grid">
+                <article class="news-card">
+                    <img src="assets/news1.png" alt="Bitcoin $100k" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">Breaking News</span>
+                        <h3 class="news-title">Bitcoin Smashes $100k Barrier: Historic Milestone Achieved</h3>
+                        <p class="news-date">Just now</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="assets/news2.png" alt="G20 and Crypto" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">Regulation</span>
+                        <h3 class="news-title">G20 Nations Officially Recognize Bitcoin as Digital Commodity</h3>
+                        <p class="news-date">4 hours ago</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="assets/hero-bg.png" alt="Green Mining" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">Technology</span>
+                        <h3 class="news-title">New "Green Mining" Tech Reduces Energy Usage by 40%</h3>
+                        <p class="news-date">1 day ago</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">AST CRYPTO</div>
+            <p style="color: var(--text-dim); margin-top: 10px;">&copy; 2026 AST Crypto Trading. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
