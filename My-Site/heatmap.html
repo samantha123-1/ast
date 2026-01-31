@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AST Crypto - Liquidity Heatmap</title>
+    <meta name="description" content="Real-time Crypto Liquidity and Market Heatmap.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">AST CRYPTO</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#market">Market</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="#" class="active">Heatmap</a></li>
+                    <li><a href="index.html#join">Join Premium</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Heatmap Section -->
+    <section class="dashboard" style="padding-top: 100px; min-height: 100vh;">
+        <div class="container" style="max-width: 95%;">
+            <h2 class="section-title">Market <span style="color: var(--secondary);">Liquidity Heatmap</span></h2>
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container"
+                style="height: 85vh; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(0,255,136,0.1);">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+                        {
+                            "dataSource": "Crypto",
+                                "blockSize": "market_cap_calc",
+                                    "blockColor": "change",
+                                        "locale": "en",
+                                            "symbolUrl": "",
+                                                "colorTheme": "dark",
+                                                    "hasTopBar": false,
+                                                        "isDataSetEnabled": false,
+                                                            "isZoomEnabled": true,
+                                                                "hasSymbolTooltip": true,
+                                                                    "width": "100%",
+                                                                        "height": "100%"
+                        }
+                    </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">AST CRYPTO</div>
+            <p style="color: var(--text-dim); margin-top: 10px;">&copy; 2026 AST Crypto Trading. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

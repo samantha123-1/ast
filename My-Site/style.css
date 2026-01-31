@@ -28,34 +28,64 @@ body {
 
 /* Animations */
 @keyframes glow {
-    0% { box-shadow: 0 0 5px var(--primary-glow); }
-    50% { box-shadow: 0 0 20px var(--primary-glow), 0 0 10px var(--primary); }
-    100% { box-shadow: 0 0 5px var(--primary-glow); }
+    0% {
+        box-shadow: 0 0 5px var(--primary-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--primary-glow), 0 0 10px var(--primary);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--primary-glow);
+    }
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 4px;
@@ -192,8 +222,13 @@ nav a:hover {
     font-weight: 600;
 }
 
-.up { color: var(--primary); }
-.down { color: #ff0055; }
+.up {
+    color: var(--primary);
+}
+
+.down {
+    color: #ff0055;
+}
 
 /* Dashboard/Charts */
 .dashboard {
@@ -212,7 +247,7 @@ nav a:hover {
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* News Section */
@@ -275,7 +310,78 @@ footer {
     border-top: 1px solid var(--glass-border);
 }
 
+/* Live Badge in Hero */
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.8s ease-out;
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #ff0055;
+    /* Default/loading/down */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0055;
+    animation: pulse 1.5s infinite;
+}
+
+.pulse.active {
+    background-color: #00ff88;
+    /* Active/Up */
+    box-shadow: 0 0 10px #00ff88;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.badge-label {
+    font-weight: 600;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+.badge-price {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.badge-change {
+    font-size: 14px;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
-    .hero h1 { font-size: 40px; }
-    nav ul { display: none; }
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        display: none;
+    }
 }
